@@ -1,1 +1,1 @@
-# EDI: Supply Chain Dashboard
+# EDI Supply Chain Dashboard
