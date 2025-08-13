@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: S3 landing + Lambda ingestion for pseudo-EDI
+
+Globals:
+  Function:
+    Runtime: python3.10
+    Timeout: 60
+    MemorySize: 256
+
+Resources:
+  LandingBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "sc-edi-landing-${AWS::StackName}-${AWS::AccountId}"
+  EdiIngestFn:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: lambda_ingest.lambda_handler
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref LandingBucket
+        - CloudWatchLogsFullAccess
+      Events:
+        OnCreate:
+          Type: S3
+          Properties:
+            Bucket: !Ref LandingBucket
+            Events: s3:ObjectCreated:*
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: suffix
+                    Value: .edi
+Outputs:
+  BucketName:
+    Value: !Ref LandingBucket
