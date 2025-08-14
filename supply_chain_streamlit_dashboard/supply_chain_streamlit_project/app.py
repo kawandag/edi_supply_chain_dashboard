@@ -1,10 +1,15 @@
 import streamlit as st
 import pandas as pd
+import os
 
 st.set_page_config(page_title="Supply Chain Risk Dashboard", layout="wide")
 
 # Load data
-df = pd.read_csv("./data/invoices.csv", parse_dates=["invoice_date", "due_date", "payment_date"])
+
+BASE_DIR = os.path.dirname(__file__)
+csv_path = os.path.join(BASE_DIR, "data", "invoices.csv")
+
+df = pd.read_csv(csv_path, parse_dates=["invoice_date", "due_date", "payment_date"])
 
 # Aggregate partner metrics
 partner_agg = df.groupby("supplier").agg(
@@ -45,4 +50,5 @@ else:
     st.subheader("Invoice Amount Trend")
     df["month"] = df["invoice_date"].dt.to_period("M").dt.to_timestamp()
     st.line_chart(df.groupby("month")["amount"].sum())
+
 
