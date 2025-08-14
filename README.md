@@ -5,6 +5,12 @@ The **Supply Chain Financial Health and Risk Dashboard** is a Streamlit-based an
 
 ---
 
+## 🌐 Live Dashboard
+A live version of the dashboard is hosted on Streamlit Cloud:  
+[👉 View Live Dashboard](https://kawandag.github.io/edi_supply_chain_dashboard/)
+
+---
+
 ## 🎯 Purpose
 Managing the financial stability of your supply chain is critical for reducing risk, optimizing cash flow, and ensuring smooth operations. This dashboard helps businesses:
 
@@ -34,12 +40,6 @@ Using this dashboard can significantly improve operations by:
 - 💰 **Optimizing Cash Flow**: Better visibility into expected inflows and payment cycles.  
 - 🤝 **Enhancing Supplier Relationships**: Prioritize suppliers with strong payment performance.  
 - 📊 **Data-Driven Decisions**: Replace manual tracking with automated, actionable insights.
-
----
-
-## 🌐 Live Dashboard
-A live version of the dashboard is hosted on Streamlit Cloud:  
-[👉 View Live Dashboard](https://your-dashboard-name.streamlit.app)
 
 ---
 
