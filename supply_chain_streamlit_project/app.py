@@ -43,6 +43,12 @@ partner_agg["late_rate"] = partner_agg["late_invoices"] / partner_agg["total_inv
 partner_agg["risk_score"] = (partner_agg["avg_dso"] / 60.0) + partner_agg["late_rate"]
 
 # Filters
+max_invoices = int(partner_agg["total_invoices"].max())
+if max_invoices > 1:
+    min_invoices = st.sidebar.slider("Minimum invoices per supplier", 1, max_invoices)
+else:
+    st.sidebar.write("Only one invoice per supplier in dataset.")
+    min_invoices = 1
 min_invoices = st.sidebar.slider("Minimum invoices per supplier", 1, int(partner_agg["total_invoices"].max() or 1), 1)
 filtered_partners = partner_agg[partner_agg["total_invoices"] >= min_invoices]
 
