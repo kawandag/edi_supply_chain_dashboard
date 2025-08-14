@@ -1,5 +1,10 @@
 # 📊 Supply Chain Financial Health and Risk Dashboard
 
+![Python](https://img.shields.io/badge/Python-3.13.5-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.48.1-orange)
+![Pandas](https://img.shields.io/badge/Pandas-2.3.1-blue)
+![Plotly](https://img.shields.io/badge/Plotly-6.3.0-purple)
+
 ## 🔍 Overview
 The **Supply Chain Financial Health and Risk Dashboard** is a Streamlit-based analytics tool designed to help businesses and financial institutions monitor the financial health and payment behavior of their trading partners. By analyzing invoice and payment data, the dashboard provides actionable insights into supplier and customer risk.
 
@@ -48,9 +53,9 @@ Using this dashboard can significantly improve operations by:
 - **Data Processing**: Python, Pandas  
 - **Visualization**: Plotly  
 - **Data Sources**: EDI 810 (Invoices), EDI 820 (Payments)  
-- **Hosting**: Streamlit Cloud / Heroku
+- **Hosting**: Streamlit Cloud
 
 ---
 
-## 📜 License
-This project is provided for educational and professional demonstration purposes.
+## 📜 Note
+This project is provided for educational and professional demonstration purposes. Mock data is provided to demonstrate how dashboard works. 
