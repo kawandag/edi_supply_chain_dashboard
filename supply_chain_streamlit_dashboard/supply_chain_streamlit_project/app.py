@@ -41,7 +41,7 @@ else:
     filtered_partners = partner_agg[partner_agg["total_invoices"] >= min_invoices]
 
     # Layout
-    st.title("Supply Chain Financial Health & Risk Dashboard")
+    st.title("Supply Chain Financial Assessment Dashboard")
     st.dataframe(filtered_partners)
 
     st.subheader("Average DSO by Supplier")
@@ -50,5 +50,6 @@ else:
     st.subheader("Invoice Amount Trend")
     df["month"] = df["invoice_date"].dt.to_period("M").dt.to_timestamp()
     st.line_chart(df.groupby("month")["amount"].sum())
+
 
 
