@@ -43,8 +43,8 @@ Using this dashboard can significantly improve operations by:
 
 - **Reducing Financial Risk**: Early detection of late payments or unreliable suppliers.  
 - **Optimizing Cash Flow**: Better visibility into expected inflows and payment cycles.  
-- 🤝 **Enhancing Supplier Relationships**: Prioritize suppliers with strong payment performance.  
-- 📊 **Data-Driven Decisions**: Replace manual tracking with automated, actionable insights.
+- **Enhancing Supplier Relationships**: Prioritize suppliers with strong payment performance.  
+- **Data-Driven Decisions**: Replace manual tracking with automated, actionable insights.
 
 ---
 
