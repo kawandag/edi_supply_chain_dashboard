@@ -6,7 +6,7 @@
 ![Plotly](https://img.shields.io/badge/Plotly-6.3.0-purple)
 
 ## 🔍 Overview
-The **Supply Chain Financial Health and Risk Dashboard** is a Streamlit-based analytics tool designed to help businesses and financial institutions monitor the financial health and payment behavior of their trading partners. By analyzing invoice and payment data, the dashboard provides actionable insights into supplier and customer risk.
+The **Supply Chain Financial Assessment Interactive Dashboard** is a Streamlit-based analytics tool designed to help businesses and financial institutions monitor the financial health and payment behavior of their trading partners. By analyzing invoice and payment data, the dashboard provides actionable insights into supplier and customer risk.
 
 ---
 
@@ -57,5 +57,5 @@ Using this dashboard can significantly improve operations by:
 
 ---
 
-## 📜 Note
+## 📜 Disclaimer
 This project is provided for educational and professional demonstration purposes. Mock data is provided to demonstrate how dashboard works. 
