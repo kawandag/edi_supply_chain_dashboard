@@ -28,13 +28,13 @@ Managing the financial stability of your supply chain is critical for reducing r
 
 ## 🛠 How to Use
 1. **Load Data**: Upload your invoice (`EDI 810`) and payment (`EDI 820`) datasets in CSV format.  
-2. **📊 Analyze Metrics**:
+2. **Analyze Metrics**:
    - View average DSO per supplier
    - Track month-over-month payment trends
    - Check individual invoice-to-payment cycle times
    - Monitor supplier risk scores
-3. **🖱 Interact**: Use sidebar filters to select minimum invoice counts, date ranges, or specific trading partners.  
-4. **💡 Insights**: Identify late payers, high-risk suppliers, or unusual payment patterns to improve business decisions.
+3. **Interact**: Use sidebar filters to select minimum invoice counts, date ranges, or specific trading partners.  
+4. **Insights**: Identify late payers, high-risk suppliers, or unusual payment patterns to improve business decisions.
 
 ---
 
