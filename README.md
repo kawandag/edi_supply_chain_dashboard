@@ -59,3 +59,7 @@ Using this dashboard can significantly improve operations by:
 
 ## 📜 Disclaimer
 This project is provided for educational and professional demonstration purposes. Mock data is provided to demonstrate how dashboard works. 
+
+## Copyright
+## © 2022 Kawanda Gray
+
