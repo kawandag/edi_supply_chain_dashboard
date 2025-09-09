@@ -41,15 +41,40 @@ else:
     filtered_partners = partner_agg[partner_agg["total_invoices"] >= min_invoices]
 
     # Layout
-    st.title("Supply Chain Financial Assessment Dashboard")
-    st.dataframe(filtered_partners)
+    st.title("📊 Supply Chain Financial Assessment Dashboard")
+    st.markdown("Gain insights into supplier risk, invoice trends, and payment performance.")
 
-    st.subheader("Average DSO by Supplier")
-    st.bar_chart(filtered_partners.set_index("supplier")["avg_dso"])
+    # KPI Metrics
+    total_inv = int(filtered_partners["total_invoices"].sum())
+    avg_dso_val = round(filtered_partners["avg_dso"].mean(), 2)
+    total_amt = round(filtered_partners["total_amount"].sum(), 2)
 
-    st.subheader("Invoice Amount Trend")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Invoices", f"{total_inv:,}")
+    col2.metric("Avg DSO (days)", avg_dso_val)
+    col3.metric("Total Spend ($)", f"{total_amt:,.0f}")
+
+    # Supplier Risk Table
+    st.subheader("🔎 Supplier Risk Overview")
+    st.dataframe(filtered_partners.style.format({
+        "avg_dso": "{:.1f}", 
+        "total_amount": "${:,.0f}", 
+        "risk_score": "{:.2f}"
+    }))
+
+    # Charts
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("📌 Average DSO by Supplier")
+        st.bar_chart(filtered_partners.set_index("supplier")["avg_dso"])
+
+    with col2:
+        st.subheader("💰 Total Spend by Supplier")
+        st.bar_chart(filtered_partners.set_index("supplier")["total_amount"])
+
+    st.subheader("📈 Monthly Invoice Amount Trend")
     df["month"] = df["invoice_date"].dt.to_period("M").dt.to_timestamp()
     st.line_chart(df.groupby("month")["amount"].sum())
-
 
 
