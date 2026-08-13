@@ -169,7 +169,7 @@ high_risk = int((partner_agg["risk_tier"] == "High").sum())
 title_col, status_col = st.columns([4, 1])
 with title_col:
     st.markdown('<div class="eyebrow">Executive overview</div>', unsafe_allow_html=True)
-    st.markdown('<div class="hero-title">Supply chain financial health</div>', unsafe_allow_html=True)
+    st.markdown('<div class="hero-title">Supply Chain Financial Health</div>', unsafe_allow_html=True)
     st.markdown(
         f'<div class="hero-copy">Monitoring {len(partner_agg)} suppliers across {len(filtered):,} invoices · '
         f'{start_date:%b %d, %Y} – {end_date:%b %d, %Y}</div>', unsafe_allow_html=True
